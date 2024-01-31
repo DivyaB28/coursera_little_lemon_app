@@ -1,0 +1,42 @@
+@import "../styles/mixins";
+@import "../styles/variables";
+
+.header {
+  @include size(100%, 1.5rem);
+  padding: 1rem;
+
+  &__container {
+    @include flex(row, space-around, center);
+  }
+
+  .skipLink {
+    position: absolute;
+    right: -638.789rem;
+    opacity: 0;
+    z-index: 999;
+    padding: 1em;
+    background-color: $color__yellow;
+    color: white;
+  }
+  .skipLink:focus {
+    right: 0;
+    opacity: 1;
+  }
+
+  .logoImg {
+    display: block;
+    max-width: max-content;
+  }
+
+  @include media_breakpoint($screen-lg) {
+    margin-top: 2rem;
+    padding: 0;
+
+    &__container {
+      max-width: 73.25rem;
+      margin: 0 auto;
+      padding-inline: 2rem;
+      gap: 2rem;
+    }
+  }
+}

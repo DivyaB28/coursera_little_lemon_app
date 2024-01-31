@@ -1,0 +1,16 @@
+@import "./mixins";
+@import "./variables";
+
+.btn {
+  @include size(12.5rem, 3.75rem);
+  padding: 1rem 0.5rem;
+  border: 0;
+  border-radius: 1rem;
+  font-size: 1.125rem;
+  font-style: inherit;
+
+  &__primary {
+    background-color: $color__yellow;
+    color: $color__black;
+  }
+}
