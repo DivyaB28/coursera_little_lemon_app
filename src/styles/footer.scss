@@ -1,0 +1,62 @@
+@import "./mixins";
+@import "./variables";
+
+.footer {
+  @include size(100%, 30rem);
+  @include flex(column, center, center);
+
+  position: absolute;
+  top: 250rem;
+  left: 0;
+  right: 0;
+  margin: 1rem 0;
+  padding: 2rem 1rem;
+
+  background-color: rgba(0, 0, 0, 0.1);
+
+  .footer__img {
+    display: none;
+  }
+
+  &__container {
+    text-align: center;
+    @include size(100%, 100%);
+
+    h1 {
+      font-size: 2rem;
+      color: $color__green;
+    }
+    a {
+      text-decoration: none;
+      color: $color__black;
+    }
+    li {
+      text-decoration: none;
+      color: $color__black;
+    }
+  }
+}
+
+@include media_breakpoint($screen-md) {
+  .footer {
+    top: 170rem;
+    @include size(100%, 20rem);
+    @include flex(row, flex-start, center);
+  }
+}
+
+@include media_breakpoint($screen-lg) {
+  .footer {
+    top: 130rem;
+
+    .footer__img {
+      display: inline-block;
+      img {
+        border-radius: 50%;
+        width: 18.75rem;
+        height: 19.75rem;
+        padding: 2rem;
+      }
+    }
+  }
+}

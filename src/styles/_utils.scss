@@ -2,8 +2,8 @@
 @import "./variables";
 
 .btn {
-  @include size(12.5rem, 3.75rem);
-  padding: 1rem 0.5rem;
+  @include size(10.5rem, 2.75rem);
+  padding: 0.5rem 0.5rem;
   border: 0;
   border-radius: 1rem;
   font-size: 1.125rem;
@@ -12,5 +12,12 @@
   &__primary {
     background-color: $color__yellow;
     color: $color__black;
+  }
+}
+
+@include media_breakpoint($screen-md) {
+  .btn {
+    @include size(12.5rem, 3.75rem);
+    padding: 1rem 0.5rem;
   }
 }

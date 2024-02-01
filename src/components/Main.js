@@ -1,6 +1,9 @@
 import React from "react";
 import desktopImage from "../assets/restauranfood.jpg";
 import "../styles/main.scss";
+import MenuOptions from "./MenuOptions";
+import Testimonials from "./Testimonials";
+import About from "./About";
 
 const Main = () => {
   return (
@@ -19,6 +22,9 @@ const Main = () => {
           <button className="btn btn__primary">Reserve a table</button>
         </div>
       </section>
+      <MenuOptions />
+      <Testimonials />
+      <About />
     </main>
   );
 };
