@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import HambergerMenu from "./HambergerMenu";
 import { HeaderContext } from "../utils/contexts";
 import "../styles/navbar.scss";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const menuStatus = useContext(HeaderContext);
@@ -12,34 +13,35 @@ const Navbar = () => {
       <HambergerMenu />
       <ul className={`navlist ${isMenuOpen ? "open" : ""}`}>
         <li>
-          <a href="/" className="navbar__link">
+          <Link to={"/"} className="navbar__link">
+            {" "}
             HOME
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#about" className="navbar__link">
+          <Link to={"/about"} className="navbar__link">
             ABOUT
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/about" className="navbar__link">
+          <Link to={"/menu"} className="navbar__link">
             MENU
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/about" className="navbar__link">
+          <Link to={"/reservation"} className="navbar__link">
             RESERVATION
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/about" className="navbar__link">
+          <Link to={"/orderonline"} className="navbar__link">
             ORDER ONLINE
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="btn navbar__link btn__login">
-            Login
-          </a>
+          <Link to={"/"} className="navbar__link">
+            LOGIN
+          </Link>
         </li>
       </ul>
     </nav>

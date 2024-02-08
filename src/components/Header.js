@@ -3,6 +3,7 @@ import Logo from "../assets/Logo.svg";
 import Navbar from "./Navbar";
 import "../styles/header.scss";
 import { HeaderContext } from "../utils/contexts";
+import { Link } from "react-router-dom";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -16,9 +17,9 @@ const Header = () => {
           Skip to main content
         </a>
         <div className="header__container">
-          <a href="/">
+          <Link to={"/"}>
             <img src={Logo} alt="" className="logoImg" />
-          </a>
+          </Link>
           <Navbar />
         </div>
       </header>

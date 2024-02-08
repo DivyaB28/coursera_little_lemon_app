@@ -4,10 +4,19 @@ import Vectordeliver from "../assets/Vectordeliver.svg";
 import bruchetta from "../assets/bruchetta.jpg";
 import lemonDessert from "../assets/lemon dessert.jpg";
 import "../styles/menuoptions.scss";
+import { useResolvedPath } from "react-router-dom";
 
 const MenuOptions = () => {
+  const resolved = useResolvedPath();
+  const matched = resolved.pathname.includes("/menu");
+  console.log(resolved.pathname.includes("/menu"));
   return (
-    <article id="#menu" className="specialMenu">
+    <article
+      id="#menu"
+      className={`${
+        matched ? "specialMenu menuPage" : "specialMenu menuPosition"
+      }`}
+    >
       <div className="specialMenu__header">
         <h1>This weeks specials!</h1>
         <button className="btn btn__primary">Order Online</button>

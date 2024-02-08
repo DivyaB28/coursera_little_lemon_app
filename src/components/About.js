@@ -2,10 +2,19 @@ import React from "react";
 import "../styles/about.scss";
 import chefsImg from "../assets/Mario and Adrian A.jpg";
 import resturantImg from "../assets/restaurant chef B.jpg";
+import { useResolvedPath } from "react-router-dom";
 
 const About = () => {
+  const resolved = useResolvedPath();
+  const matched = resolved.pathname.includes("/about");
+  console.log(resolved.pathname.includes("/about"));
   return (
-    <section id="#about" className="about">
+    <section
+      id="#about"
+      className={`${
+        matched ? "about positionAboutPage" : "about positionabout"
+      }`}
+    >
       <article className="about__desciption">
         <h2>Little Lemon</h2>
         <h3>Chicago</h3>

@@ -1,9 +1,15 @@
 @import "./mixins";
 @import "./variables";
 
+.positionAboutPage {
+  top: 5rem;
+}
+.positionabout {
+  top: 195rem;
+}
 .about {
   position: absolute;
-  top: 195rem;
+
   left: 1rem;
   right: 1rem;
   margin-bottom: 3rem;
@@ -58,8 +64,10 @@
 }
 
 @include media_breakpoint($screen-md) {
-  .about {
+  .positionabout {
     top: 140rem;
+  }
+  .about {
     @include flex(row, flex-start, center);
 
     &__img {
@@ -89,8 +97,10 @@
 }
 
 @include media_breakpoint($screen-lg) {
-  .about {
+  .positionabout {
     top: 102rem;
+  }
+  .about {
     &__img {
       img {
         &:nth-child(odd) {

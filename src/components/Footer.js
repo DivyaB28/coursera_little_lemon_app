@@ -1,6 +1,7 @@
 import React from "react";
 import resturant from "../assets/restaurant.jpg";
 import "../styles/footer.scss";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -12,22 +13,28 @@ const Footer = () => {
         <h1>Doormat Navigation</h1>
         <ul>
           <li>
-            <a href="/">HOME</a>
+            {/* <a href="/">HOME</a> */}
+            <Link to={"/"}>HOME</Link>
           </li>
           <li>
-            <a href="#about">ABOUT</a>
+            {/* <a href="#about">ABOUT</a> */}
+            <Link to={"/about"}>ABOUT</Link>
           </li>
           <li>
-            <a href="#menu">MENU</a>
+            {/* <a href="#menu">MENU</a> */}
+            <Link to={"/menu"}>HOME</Link>
           </li>
           <li>
-            <a href="/">RESERVATIONS</a>
+            {/* <a href="/">RESERVATIONS</a> */}
+            <Link to={"/reservations"}>RESERVATIONS</Link>
           </li>
           <li>
-            <a href="/">ORDER ONLINE</a>
+            {/* <a href="/">ORDER ONLINE</a> */}
+            <Link to={"/order"}>ORDER ONLINE</Link>
           </li>
           <li>
-            <a href="/">LOGIN</a>
+            {/* <a href="/">LOGIN</a> */}
+            <Link to={"/"}>LOGIN</Link>
           </li>
         </ul>
       </div>

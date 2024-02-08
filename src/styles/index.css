@@ -38,6 +38,11 @@ ul {
   list-style: none;
 }
 
+button,
+input,
+select {
+  margin: 0;
+}
 body {
   min-height: 100vh;
   overflow-x: hidden;

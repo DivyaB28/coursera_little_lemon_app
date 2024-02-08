@@ -1,9 +1,15 @@
 @import "./mixins";
 @import "./variables";
 
+.menuPage {
+  top: 7rem;
+}
+.menuPosition {
+  top: 37rem;
+}
 .specialMenu {
   position: absolute;
-  top: 37rem;
+
   left: 1rem;
   right: 1rem;
 

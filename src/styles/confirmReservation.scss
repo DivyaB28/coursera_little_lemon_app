@@ -1,0 +1,17 @@
+@import "./variables";
+@import "./mixins";
+
+.successMsg {
+  position: absolute;
+  top: 5rem;
+  width: 100%;
+
+  @include flex(column, center, center);
+  margin: 2rem 0;
+
+  p {
+    font-size: 2rem;
+    font-weight: 800;
+    color: $color__green;
+  }
+}
