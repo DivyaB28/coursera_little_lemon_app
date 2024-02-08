@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../components/Home";
 import Login from "../components/Login";
 import MenuOptions from "../components/MenuOptions";
-import OrderOnline from "../components/OrderOnline";
+
 import Structure from "./Structure";
 import About from "../components/About";
 import BookingPage from "../components/Reservation";
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/orderonline",
-        element: <OrderOnline />,
+        element: <Home />,
       },
       {
         path: "/menu",
